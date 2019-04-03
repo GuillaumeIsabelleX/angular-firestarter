@@ -1,11 +1,18 @@
 {
   "name": "firestarter",
   "version": "0.1.0",
+  "homepage": "https://github.com/GuillaumeIsabelleX/angular-firestarter#gixs-firestarter-goal",
+  "bugs":"https://github.com/GuillaumeIsabelleX/angular-firestarter/issues",
+  "repository":{
+	  "type":"git",
+	  "url":"git@github.com:GuillaumeIsabelleX/angular-firestarter.git"
+
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0 --port 4200 --disableHostCheck ",
     "build": "ng build --prod",    
-    "test": "ng test --watch false",
+    "test": "ng test --watch true",
     "test:watch": "ng test --watch false",
     "lint": "ng lint",
     "e2e": "cypress open",
