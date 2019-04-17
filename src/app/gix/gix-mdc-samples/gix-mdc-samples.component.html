@@ -14,8 +14,7 @@
 <hr>
 
 <button mat-raised-button color="primary" class="gix-button-shadow gix-cornecto-button"
-  (click)="showNotification('creating clicked')"
-  matTooltip="A rounded button using Material Design"
+  (click)="showNotification('creating clicked')" matTooltip="A rounded button using Material Design"
   aria-label="A Rounded button using material design">
   <mat-icon>add</mat-icon>
   <span class="gix-button-cornecto-label">Create</span>
@@ -45,34 +44,74 @@
   matTooltip="Show a WARNING notification toast that will stick until closed"
   aria-label="Button that displays a warning sticking notification toast"></p-button>
 <button type="button" pButton (click)="showError()" label="Error" class="ui-button-danger"
-  matTooltip="Show an ERROR notification toast "
-  aria-label="Button that displays a error notification toast"></button>
+  matTooltip="Show an ERROR notification toast " aria-label="Button that displays a error notification toast"></button>
 
-  <hr>
+<hr>
 
 
-  <h2>Button Labels</h2>
-  <button mat-raised-button matTooltip="Info about the action"
-    aria-label="Button that displays a tooltip when focused or hovered over">
-    Action
-  </button>
-  
-  <hr>
-  
-  
-  <h2>Dialogs</h2>
-  
-  
-
-  <button mat-raised-button color="primary" class="gix-button-shadow gix-cornecto-button"
-  (click)="openDialog()"
-  matTooltip="Opens a dialog showing up a component within it"
-  aria-label="Opens a dialog showing up a component within it">
-  <mat-icon>add</mat-icon>
-  <span class="gix-button-cornecto-label">Show Component Dialog</span>
+<h2>Button Labels</h2>
+<button mat-raised-button matTooltip="Info about the action"
+  aria-label="Button that displays a tooltip when focused or hovered over">
+  Action
 </button>
 
-  
+<hr>
+
+
+<h2>Dialogs</h2>
+
+<!--@STCGoal A Simple dialog width 455px  -->
+<p-dialog header="A Simple Dialog" [(visible)]="display" [style]="{width: '455px', height: auto}">
+  <div>
+
+    Aute id irure proident minim do anim sit minim deserunt irure do. Elit adipisicing voluptate nisi in sint voluptate
+    cupidatat ipsum enim cupidatat enim ea. Non et Lorem fugiat aliquip tempor proident velit qui ea eu ipsum. Nostrud
+    consequat consequat eiusmod sit nisi in sint proident nisi officia laborum cupidatat ad aliqua. Nostrud ut laboris
+    id qui consectetur sit mollit tempor consequat.
+  </div>
+</p-dialog>
+
+<button type="button" (click)="showDialog()" pButton icon="pi pi-info-circle" label="Show Simple Dialog no1"></button>
+<br>
+
+<!--@STCGoal A Simple dialog width 455px that has footer, header and button -->
+<p-dialog [(visible)]="displayno2" [style]="{width: '555px', height: auto}">
+  <p-header>
+    Header content here
+  </p-header>
+  Content Esse reprehenderit eiusmod ea nostrud do ipsum nostrud laborum cillum id ipsum id ut. Laborum laborum veniam
+  minim esse nulla laboris. Aute veniam aliquip ex in. Do ad labore laborum consequat consequat quis do aliqua proident
+  do. Pariatur ad pariatur fugiat sit excepteur voluptate voluptate minim Lorem do sit nostrud veniam adipisicing. Non
+  nostrud ad labore et nulla veniam nisi.
+  <p-footer>
+
+    <button mat-raised-button color="primary" class="gix-button-shadow gix-cornecto-button"
+      (click)="showNotification('Modal creating button clicked\n the dialog will close');this.displayno2=false"
+      matTooltip="Modal Accept button" aria-label="A Rounded button using material design">
+      <mat-icon>add</mat-icon>
+      <span class="gix-button-cornecto-label">Accept</span>
+    </button>
+
+    <button mat-raised-button color="secondary" class="gix-button-shadow gix-cornecto-button"
+      (click)="showNotification('Modal CANCEL button clicked\n the dialog will close','error');this.displayno2=false"
+      matTooltip="Modal Cancel button" aria-label="A Rounded button using material design">
+      <mat-icon>cancel</mat-icon>
+      <span class="gix-button-cornecto-label">Cancel</span>
+    </button>
+   
+    
+  </p-footer>
+</p-dialog>
+
+<button type="button" (click)="showDialogno2()" pButton icon="pi pi-info-circle"
+  label="Dialog no2 with Footer Action Accept & Cancel"></button>
+<br>
+
+
+<!--####################################################-->
+
+
+
 <hr>
 <br>
 <h3>Material Resources</h3>

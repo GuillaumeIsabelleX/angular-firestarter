@@ -18,29 +18,27 @@ export class GixMdcSamplesComponent implements OnInit {
   constructor(public notifyService: NotifyService,public dialog: MatDialog) { }
 
 
-  openDialog() {
+  display: boolean = false;
+  displayno2: boolean = false;
+
+    showDialog() {
+        this.display = true;
+    }
+
+    showDialogno2() {
+        this.displayno2 = true;
+    }
+
 
     
-    const dialogRef = this.dialog.open(GixDialogSampleComponent,{
-      maxWidth: '100vw',
-      maxHeight: '100vh',
-      height: '100%',
-      width: '100%'
-    });
-    
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }
 
   ngOnInit() {
   }
 
 
-  showNotification(msg:string)
+  showNotification(msg:string,style: 'error' | 'info' | 'success' = 'info')
   {
-    this.notifyService.update(msg,'info');
+    this.notifyService.update(msg,style);
   }
 
 

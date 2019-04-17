@@ -54,6 +54,8 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatDialogModule} from '@angular/material/dialog';
 import { GixDialogSampleComponent } from '../gix/gix-dialog-sample/gix-dialog-sample.component';
 
+import {DialogModule} from 'primeng/dialog';
+
 @NgModule({
   imports: [CommonModule, RouterModule, ReactiveFormsModule,
     MatGridListModule,
@@ -81,6 +83,8 @@ import { GixDialogSampleComponent } from '../gix/gix-dialog-sample/gix-dialog-sa
     ButtonModule,
     MatStepperModule,
     MatDialogModule
+    , //Dialog
+    DialogModule
   ],
   declarations: [
     UserLoginComponent,
@@ -130,6 +134,8 @@ import { GixDialogSampleComponent } from '../gix/gix-dialog-sample/gix-dialog-sa
     MatButtonModule,
     MatStepperModule,
     MatDialogModule
+    ,//Dialog
+    DialogModule
   ]
 })
 export class UiModule { }
